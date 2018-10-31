@@ -1,0 +1,13 @@
+DROP TABLE BI.TB_WRK_FFFC_BRA_SMPMDTR_CLAS;
+
+CREATE TABLE BI.TB_WRK_FFFC_BRA_SMPMDTR_CLAS
+(
+	class4_cod VARCHAR2(6),
+	class4_des VARCHAR2(30),
+	class3_cod VARCHAR2(4),
+	class3_des VARCHAR2(30),
+	class2_cod VARCHAR2(3),
+	class2_des VARCHAR2(30),
+	class1_cod VARCHAR2(1),
+	class1_des VARCHAR2(30)
+);

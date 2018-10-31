@@ -1,0 +1,15 @@
+DROP TABLE BI_MDM.TB_DM_PRC;
+
+CREATE TABLE BI_MDM.TB_DM_PRC
+(
+	period_cod VARCHAR2(8) PRIMARY KEY,
+	fcc_cod VARCHAR2(10),
+	pr_list VARCHAR2(15),
+	pr_ppp VARCHAR2(15),
+	pr_ch VARCHAR2(15),
+	pr_ch_ppp VARCHAR2(15),
+	DT_ULT_ATZ timestamp
+);
+    
+    
+SELECT * FROM BI_MDM.TB_DM_PRC

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="GPS.erd" time="201810301913">
+	<entities>
+		<data-source id="oracle_thin-166549e534b-37aef3452a7dd237">
+			<entity id="1" name="TB_DM_APP" fq-name="BI_MDM.TB_DM_APP" order="0" x="21" y="17">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="2" name="TB_DM_APP_PCK" fq-name="BI_MDM.TB_DM_APP_PCK" order="1" x="118" y="264">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="3" name="TB_DM_CHNNL" fq-name="BI_MDM.TB_DM_CHNNL" order="2" x="1156" y="62">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="4" name="TB_DM_CNCTR" fq-name="BI_MDM.TB_DM_CNCTR" order="3" x="30" y="451">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="5" name="TB_DM_DSPNSD_PCKS" fq-name="BI_MDM.TB_DM_DSPNSD_PCKS" order="4" x="353" y="450">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="6" name="TB_DM_NEC" fq-name="BI_MDM.TB_DM_NEC" order="5" x="19" y="645">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="7" name="TB_DM_ATC" fq-name="BI_MDM.TB_DM_ATC" order="6" x="35" y="978">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="8" name="TB_DM_DSPNSD_PRDT" fq-name="BI_MDM.TB_DM_DSPNSD_PRDT" order="7" x="330" y="1098">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="9" name="TB_DM_DCTRS" fq-name="BI_MDM.TB_DM_DCTRS" order="8" x="1298" y="311">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="10" name="TB_DM_GGRPH" fq-name="BI_MDM.TB_DM_GGRPH" order="9" x="354" y="208">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="11" name="TB_DM_IMS_BRCK" fq-name="BI_MDM.TB_DM_IMS_BRCK" order="10" x="883" y="38">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="12" name="TB_DM_IMS_TRRTR" fq-name="BI_MDM.TB_DM_IMS_TRRTR" order="11" x="336" y="39">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="13" name="TB_DM_PRSCRBD_PRDCT_CNCTR" fq-name="BI_MDM.TB_DM_PRSCRBD_PRDCT_CNCTR" order="12" x="687" y="815">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="14" name="TB_DM_PRSCRBD_PRDCT" fq-name="BI_MDM.TB_DM_PRSCRBD_PRDCT" order="13" x="886" y="1147">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="15" name="TB_DM_MNFCTRR" fq-name="BI_MDM.TB_DM_MNFCTRR" order="14" x="628" y="1146">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="16" name="TB_FT_GPS" fq-name="BI_MDM.TB_FT_GPS" order="15" x="768" y="371">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="17" name="TB_DM_MRKT" fq-name="BI_MDM.TB_DM_MRKT" order="16" x="612" y="37">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="18" name="TB_DM_SWTCH" fq-name="BI_MDM.TB_DM_SWTCH" order="17" x="1386" y="67">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="19" name="TB_DM_TRRTR_SLSFRC" fq-name="BI_MDM.TB_DM_TRRTR_SLSFRC" order="18" x="1196" y="712">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="20" name="TB_DM_BSNSS_UNT_SLSFRC" fq-name="BI_MDM.TB_DM_BSNSS_UNT_SLSFRC" order="19" x="1123" y="897">
+				<path name="BI_MDM"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="FK_SK_APP3_PCK" fq-name="BI_MDM.TB_DM_APP_PCK.FK_SK_APP3_PCK" type="fk" pk-ref="1" fk-ref="2"/>
+		<relation name="FK_PCK_CNCTR" fq-name="BI_MDM.TB_DM_CNCTR.FK_PCK_CNCTR" type="fk" pk-ref="2" fk-ref="4"/>
+		<relation name="FK_CHNNL_GPS" fq-name="BI_MDM.TB_FT_GPS.FK_CHNNL_GPS" type="fk" pk-ref="3" fk-ref="16"/>
+		<relation name="FK_PRDCT_CNCTR" fq-name="BI_MDM.TB_DM_DSPNSD_PCKS.FK_PRDCT_CNCTR" type="fk" pk-ref="4" fk-ref="5"/>
+		<relation name="FK_DSPNSD_PCKS_GPS" fq-name="BI_MDM.TB_FT_GPS.FK_DSPNSD_PCKS_GPS" type="fk" pk-ref="5" fk-ref="16"/>
+		<relation name="FK_NEC" fq-name="BI_MDM.TB_DM_DSPNSD_PCKS.FK_NEC" type="fk" pk-ref="6" fk-ref="5"/>
+		<relation name="FK_ATC" fq-name="BI_MDM.TB_DM_DSPNSD_PCKS.FK_ATC" type="fk" pk-ref="7" fk-ref="5"/>
+		<relation name="FK_DSPNSD_PRDT" fq-name="BI_MDM.TB_DM_DSPNSD_PCKS.FK_DSPNSD_PRDT" type="fk" pk-ref="8" fk-ref="5"/>
+		<relation name="FK_DCTRS_GPS" fq-name="BI_MDM.TB_FT_GPS.FK_DCTRS_GPS" type="fk" pk-ref="9" fk-ref="16"/>
+		<relation name="FK_GGRPH_GPS" fq-name="BI_MDM.TB_FT_GPS.FK_GGRPH_GPS" type="fk" pk-ref="10" fk-ref="16"/>
+		<relation name="FK_IMS_BRCK_GPS" fq-name="BI_MDM.TB_FT_GPS.FK_IMS_BRCK_GPS" type="fk" pk-ref="11" fk-ref="16"/>
+		<relation name="FK_IMS_TRRTR_GPS" fq-name="BI_MDM.TB_FT_GPS.FK_IMS_TRRTR_GPS" type="fk" pk-ref="12" fk-ref="16"/>
+		<relation name="FK_PRSCRBD_PRDCT_CNCTR_GPS" fq-name="BI_MDM.TB_FT_GPS.FK_PRSCRBD_PRDCT_CNCTR_GPS" type="fk" pk-ref="13" fk-ref="16"/>
+		<relation name="FK_PRSCRBD_PRDCT" fq-name="BI_MDM.TB_DM_PRSCRBD_PRDCT_CNCTR.FK_PRSCRBD_PRDCT" type="fk" pk-ref="14" fk-ref="13"/>
+		<relation name="FK_MNFCTRR" fq-name="BI_MDM.TB_DM_PRSCRBD_PRDCT_CNCTR.FK_MNFCTRR" type="fk" pk-ref="15" fk-ref="13"/>
+		<relation name="FK_MRKT_GPS" fq-name="BI_MDM.TB_FT_GPS.FK_MRKT_GPS" type="fk" pk-ref="17" fk-ref="16"/>
+		<relation name="FK_SWTCH_GPS" fq-name="BI_MDM.TB_FT_GPS.FK_SWTCH_GPS" type="fk" pk-ref="18" fk-ref="16"/>
+		<relation name="FK_TRRTR_SLSFRC_GPS" fq-name="BI_MDM.TB_FT_GPS.FK_TRRTR_SLSFRC_GPS" type="fk" pk-ref="19" fk-ref="16"/>
+		<relation name="FK_BSNSS_UNT_SLSFRC_GPS" fq-name="BI_MDM.TB_FT_GPS.FK_BSNSS_UNT_SLSFRC_GPS" type="fk" pk-ref="20" fk-ref="16"/>
+	</relations>
+	<notes/>
+</diagram>

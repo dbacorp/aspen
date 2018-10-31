@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="MDTR_MNSL.erd" time="201810291100">
+	<entities>
+		<data-source id="oracle_thin-166549e534b-37aef3452a7dd237">
+			<entity id="1" name="TB_DM_APP" fq-name="BI_MDM.TB_DM_APP" order="0" x="8" y="892">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="2" name="TB_DM_BRCK" fq-name="BI_MDM.TB_DM_BRCK" order="1" x="16" y="414">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="3" name="TB_DM_CHN" fq-name="BI_MDM.TB_DM_CHN" order="2" x="26" y="84">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="4" name="TB_DM_CLS" fq-name="BI_MDM.TB_DM_CLS" order="3" x="11" y="609">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="5" name="TB_DM_CRP" fq-name="BI_MDM.TB_DM_CRP" order="4" x="300" y="18">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="6" name="TB_DM_DST" fq-name="BI_MDM.TB_DM_DST" order="5" x="1587" y="635">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="7" name="TB_DM_MNU" fq-name="BI_MDM.TB_DM_MNU" order="6" x="590" y="25">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="8" name="TB_DM_MOL" fq-name="BI_MDM.TB_DM_MOL" order="7" x="35" y="1168">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="9" name="TB_DM_NEC" fq-name="BI_MDM.TB_DM_NEC" order="8" x="316" y="1146">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="10" name="TB_DM_OUTF" fq-name="BI_MDM.TB_DM_OUTF" order="9" x="1580" y="46">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="11" name="TB_DM_OUTL" fq-name="BI_MDM.TB_DM_OUTL" order="10" x="288" y="271">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="12" name="TB_DM_PFLGS" fq-name="BI_MDM.TB_DM_PFLGS" order="11" x="622" y="933">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="13" name="TB_DM_RGN" fq-name="BI_MDM.TB_DM_RGN" order="12" x="1293" y="1008">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="14" name="TB_DM_PRV" fq-name="BI_MDM.TB_DM_PRV" order="13" x="1025" y="1240">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="15" name="TB_DM_SBS" fq-name="BI_MDM.TB_DM_SBS" order="14" x="140" y="1544">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="16" name="TB_DM_SLS" fq-name="BI_MDM.TB_DM_SLS" order="15" x="1563" y="1138">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="17" name="TB_DM_TMP" fq-name="BI_MDM.TB_DM_TMP" order="16" x="1241" y="114">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="18" name="TB_DM_TRR" fq-name="BI_MDM.TB_DM_TRR" order="17" x="1564" y="860">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="19" name="TB_DM_PKML" fq-name="BI_MDM.TB_DM_PKML" order="18" x="46" y="1339">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="20" name="TB_DM_PRD" fq-name="BI_MDM.TB_DM_PRD" order="19" x="658" y="288">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="21" name="TB_DM_PCK" fq-name="BI_MDM.TB_DM_PCK" order="20" x="330" y="701">
+				<path name="BI_MDM"/>
+			</entity>
+			<entity id="22" name="TB_FT_MDTR_MNSL" fq-name="BI_MDM.TB_FT_MDTR_MNSL" order="21" x="1058" y="553">
+				<path name="BI_MDM"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="FK_SK_APP3" fq-name="BI_MDM.TB_DM_PCK.FK_SK_APP3" type="fk" pk-ref="1" fk-ref="21"/>
+		<relation name="FK_SK_BRCK" fq-name="BI_MDM.TB_DM_OUTL.FK_SK_BRCK" type="fk" pk-ref="2" fk-ref="11"/>
+		<relation name="FK_SK_CHN" fq-name="BI_MDM.TB_DM_OUTL.FK_SK_CHN" type="fk" pk-ref="3" fk-ref="11"/>
+		<relation name="FK_SK_CLS4" fq-name="BI_MDM.TB_DM_PCK.FK_SK_CLS4" type="fk" pk-ref="4" fk-ref="21"/>
+		<relation name="FK_SK_CRP" fq-name="BI_MDM.TB_DM_MNU.FK_SK_CRP" type="fk" pk-ref="5" fk-ref="7"/>
+		<relation name="FK_SK_DST" fq-name="BI_MDM.TB_DM_TRR.FK_SK_DST" type="fk" pk-ref="6" fk-ref="18"/>
+		<relation name="FK_SK_MMU" fq-name="BI_MDM.TB_DM_PRD.FK_SK_MMU" type="fk" pk-ref="7" fk-ref="20"/>
+		<relation name="FK_SK_MOL_PKML" fq-name="BI_MDM.TB_DM_PKML.FK_SK_MOL_PKML" type="fk" pk-ref="8" fk-ref="19"/>
+		<relation name="FK_SK_MOL" fq-name="BI_MDM.TB_DM_PCK.FK_SK_MOL" type="fk" pk-ref="8" fk-ref="21"/>
+		<relation name="FK_SK_NEC4" fq-name="BI_MDM.TB_DM_PCK.FK_SK_NEC4" type="fk" pk-ref="9" fk-ref="21"/>
+		<relation name="SK_OUTL" fq-name="BI_MDM.TB_FT_MDTR_MNSL.SK_OUTL" type="fk" pk-ref="11" fk-ref="22"/>
+		<relation name="SK_PFLGS" fq-name="BI_MDM.TB_FT_MDTR_MNSL.SK_PFLGS" type="fk" pk-ref="12" fk-ref="22"/>
+		<relation name="FK_SK_RGN" fq-name="BI_MDM.TB_DM_TRR.FK_SK_RGN" type="fk" pk-ref="13" fk-ref="18"/>
+		<relation name="SK_RGN" fq-name="BI_MDM.TB_FT_MDTR_MNSL.SK_RGN" type="fk" pk-ref="13" fk-ref="22"/>
+		<relation name="SK_SK_PRV" fq-name="BI_MDM.TB_FT_MDTR_MNSL.SK_SK_PRV" type="fk" pk-ref="14" fk-ref="22"/>
+		<relation name="FK_SK_SBS" fq-name="BI_MDM.TB_DM_PKML.FK_SK_SBS" type="fk" pk-ref="15" fk-ref="19"/>
+		<relation name="FK_SK_SLS_RGN" fq-name="BI_MDM.TB_DM_RGN.FK_SK_SLS_RGN" type="fk" pk-ref="16" fk-ref="13"/>
+		<relation name="FK_SK_SLS" fq-name="BI_MDM.TB_DM_TRR.FK_SK_SLS" type="fk" pk-ref="16" fk-ref="18"/>
+		<relation name="FK_SK_DTALT" fq-name="BI_MDM.TB_DM_OUTF.FK_SK_DTALT" type="fk" pk-ref="17" fk-ref="10"/>
+		<relation name="FK_SK_DTCAD" fq-name="BI_MDM.TB_DM_OUTF.FK_SK_DTCAD" type="fk" pk-ref="17" fk-ref="10"/>
+		<relation name="SK_TMP_APRC" fq-name="BI_MDM.TB_FT_MDTR_MNSL.SK_TMP_APRC" type="fk" pk-ref="17" fk-ref="22"/>
+		<relation name="SK_TMP_PRD" fq-name="BI_MDM.TB_FT_MDTR_MNSL.SK_TMP_PRD" type="fk" pk-ref="17" fk-ref="22"/>
+		<relation name="SK_TRR" fq-name="BI_MDM.TB_FT_MDTR_MNSL.SK_TRR" type="fk" pk-ref="18" fk-ref="22"/>
+		<relation name="FK_SK_PRD_PCK" fq-name="BI_MDM.TB_DM_PCK.FK_SK_PRD_PCK" type="fk" pk-ref="20" fk-ref="21"/>
+	</relations>
+	<notes/>
+</diagram>

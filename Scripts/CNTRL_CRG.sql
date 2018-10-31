@@ -1,0 +1,88 @@
+--CREATE USER bi_cntrl_crg IDENTIFIED BY bicrg;
+ 
+/*  
+GRANT create session TO bi_cntrl_crg;
+GRANT create table TO bi_cntrl_crg;
+GRANT create view TO bi_cntrl_crg;
+GRANT create any trigger TO bi_cntrl_crg;
+GRANT create any procedure TO bi_cntrl_crg;
+GRANT create sequence TO bi_cntrl_crg;
+GRANT create synonym TO bi_cntrl_crg;
+grant connect TO bi_cntrl_crg;
+GRANT CONNECT, RESOURCE, DBA TO bi_cntrl_crg;
+GRANT UNLIMITED TABLESPACE TO bi_cntrl_crg;
+*/
+
+CREATE TABLE bi_cntrl_crg.TB_STTS_CNTRL_CRG
+(   ID_STTS_CRG INT NOT NULL,
+    NM_STTS_CRG VARCHAR(50) NOT NULL,
+    DT_ULT_ATLZ TIMESTAMP NOT NULL,
+    CONSTRAINT ID_STTS_CRG_PK PRIMARY KEY (ID_STTS_CRG))
+;
+
+CREATE PUBLIC SYNONYM TB_STTS_CNTRL_CRG FOR bi_cntrl_crg.TB_STTS_CNTRL_CRG;
+    
+INSERT INTO bi_cntrl_crg.TB_STTS_CNTRL_CRG values (1,'Sucesso',sysdate);
+
+INSERT INTO bi_cntrl_crg.TB_STTS_CNTRL_CRG values (2,'Erro',sysdate);
+
+INSERT INTO bi_cntrl_crg.TB_STTS_CNTRL_CRG values (3,'Warning',sysdate);
+
+INSERT INTO bi_cntrl_crg.TB_STTS_CNTRL_CRG values (0,'Em Execução',sysdate);
+
+UPDATE bi_cntrl_crg.TB_STTS_CNTRL_CRG SET NM_STTS_CRG = 'Diretório Vazio' WHERE ID_STTS_CRG = 3
+
+COMMIT
+
+SELECT * FROM bi_cntrl_crg.TB_STTS_CNTRL_CRG;
+
+DROP TABLE bi_cntrl_crg.TB_CNTRL_CRG;
+
+CREATE TABLE bi_cntrl_crg.TB_CNTRL_CRG
+(   ID_CNTRL_CRG INT NOT NULL,
+    NM_CRG VARCHAR(100) NOT NULL,
+    DT_INI_CRG TIMESTAMP,
+    DT_FIM_CRG TIMESTAMP,
+    ID_STTS_CRG INT NOT NULL,
+    NM_CRG_ERR CLOB
+);
+
+INSERT INTO bi_cntrl_crg.TB_CNTRL_CRG VALUES (1,'Carga Inicial',SYSDATE,SYSDATE,1,NULL);
+
+SELECT MAX(ID_CNTRL_CRG)+1 FROM bi_cntrl_crg.TB_CNTRL_CRG;
+
+SELECT * FROM BI_CNTRL_CRG.TB_CNTRL_CRG ORDER BY 1 DESC
+
+DELETE FROM BI_CNTRL_CRG.TB_CNTRL_CRG WHERE ID_CNTRL_CRG > 0
+
+COMMIT
+
+
+UPDATE BI_CNTRL_CRG.TB_CNTRL_CRG
+SET ID_STTS_CRG = 1, DT_FIM_CRG = SYSDATE
+WHERE ID_CNTRL_CRG  0
+
+
+CREATE TABLE BI_CNTRL_CRG.ORCL_CLD_USR
+( ID_USR INTEGER,
+	LGN_USR VARCHAR2(100),
+	PSS_USR VARCHAR2(100) );
+	
+INSERT INTO BI_CNTRL_CRG.ORCL_CLD_USR VALUES (1,'fgomes1@aspenpharma.com.br','Imaspen2018#')
+
+COMMIT
+
+UPDATE BI_CNTRL_CRG.ORCL_CLD_USR SET LGN_USR = 'Storage-aspenpharma:fgomes1@aspenpharma.com.br' 
+
+SELECT PSS_USR
+FROM
+BI_CNTRL_CRG.ORCL_CLD_USR
+
+DROP TABLE BI_CNTRL_CRG.ORCL_CLD_TKN
+
+CREATE TABLE BI_CNTRL_CRG.ORCL_CLD_TKN
+( ID_TKN VARCHAR2(100))
+
+SELECT MAX(ID_TKN) FROM BI_CNTRL_CRG.ORCL_CLD_TKN
+
+
